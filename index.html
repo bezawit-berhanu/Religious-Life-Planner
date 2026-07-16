@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orthodox Life System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ols-bg: #EFEBE9;
+        --ols-primary: #3E2723;
+        --ols-secondary: #FFB300;
+        --ols-accent: #8D6E63;
+        --ols-text: #271c19;
+        --ols-muted: #8D8D8D;
+        --ols-surface: #ffffff;
+      }
+      .dark {
+        --ols-bg: #121212;
+        --ols-primary: #D7CCC8; /* Light Brownish Grey */
+        --ols-secondary: #FFCA28; /* Lighter Gold */
+        --ols-accent: #A1887F;
+        --ols-text: #EFEBE9;
+        --ols-muted: #BCAAA4;
+        --ols-surface: #1E1E1E;
+      }
+      .theme-black {
+        --ols-bg: #1c1c1c;
+        --ols-primary: #e0e0e0;
+        --ols-secondary: #a0a0a0;
+        --ols-accent: #606060;
+        --ols-text: #ffffff;
+        --ols-muted: #808080;
+        --ols-surface: #2c2c2c;
+      }
+      .theme-brown {
+        --ols-bg: #4e342e;
+        --ols-primary: #d7ccc8;
+        --ols-secondary: #ffb300;
+        --ols-accent: #8d6e63;
+        --ols-text: #efebe9;
+        --ols-muted: #bcaaa4;
+        --ols-surface: #3e2723;
+      }
+      .theme-pink {
+        --ols-bg: #fce4ec;
+        --ols-primary: #880e4f;
+        --ols-secondary: #f48fb1;
+        --ols-accent: #c2185b;
+        --ols-text: #4a148c;
+        --ols-muted: #ad1457;
+        --ols-surface: #f8bbd0;
+      }
+      .theme-lavender {
+        --ols-bg: #f3e5f5;
+        --ols-primary: #4a148c;
+        --ols-secondary: #ce93d8;
+        --ols-accent: #7b1fa2;
+        --ols-text: #311b92;
+        --ols-muted: #6a1b9a;
+        --ols-surface: #e1bee7;
+      }
+      .theme-cream {
+        --ols-bg: #fffdd0;
+        --ols-primary: #5d4037;
+        --ols-secondary: #d7ccc8;
+        --ols-accent: #8d6e63;
+        --ols-text: #3e2723;
+        --ols-muted: #795548;
+        --ols-surface: #ffffff;
+      }
+      body {
+        background-color: var(--ols-bg);
+        color: var(--ols-text);
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--ols-accent);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5D4037;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Noto Sans Ethiopic', 'sans-serif'],
+              serif: ['Cinzel', 'serif'],
+            },
+            colors: {
+              ols: {
+                bg: 'var(--ols-bg)', 
+                primary: 'var(--ols-primary)', 
+                secondary: 'var(--ols-secondary)', 
+                accent: 'var(--ols-accent)', 
+                text: 'var(--ols-text)', 
+                muted: 'var(--ols-muted)',
+                surface: 'var(--ols-surface)',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
